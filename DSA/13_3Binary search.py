@@ -7,7 +7,7 @@ while(True):
     data.append(i)
     if i==100:
         
-        
+        print(i)
         break
 data2=[]
 for i in range(0,101):
