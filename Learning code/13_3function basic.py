@@ -1,7 +1,7 @@
 #
 def check_length(text):
     tr=0
-    for i in check_length:
+    for i in range(len(text)):
         if i>8:
             return "boolean true"
         elif i<=8:
