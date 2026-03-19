@@ -8,7 +8,7 @@ for i in data:
     if i!=0:
        clean_data.append(i)
       # print(clean_data) 
-for i in data:
+#for i in data:
     if i==0:
        
         zero.append(i)
