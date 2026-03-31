@@ -1,12 +1,16 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.chrome.options import Options
 import time
 
 # Set up Chrome WebDriver
-driver = webdriver.Chrome()
+
+chrome_options = Options()
+chrome_options.add_experimental_option("detach", True)  # This will keep the browser open after the script finishes
+driver = webdriver.Chrome(options=chrome_options)
 driver.get("http://qa.lemniska.com/")
 wait = WebDriverWait(driver, 10)
 driver.maximize_window()
